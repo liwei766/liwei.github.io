@@ -17,6 +17,6 @@ jobs:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        DISTRIBUTION_ID: "E3NOS26KLT8BOG"
+        DISTRIBUTION_ID: "E2O4C5ZP967GP5"
         # AWS_REGION: 'ap-northeast-1'   # optional: defaults to ap-northeast-1
         # SOURCE_DIR: 'public'      # optional: defaults to entire repository
