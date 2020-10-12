@@ -30,7 +30,8 @@ $(function () {
                     message: message,
                 },
                 crossDomain: true,
-                dataType: 'jsonp',
+                contentType: 'application/json',
+                dataType: "json",
                 cache: false,
                 success: function () {
                     // Success message
