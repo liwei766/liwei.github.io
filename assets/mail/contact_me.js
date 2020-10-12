@@ -6,6 +6,39 @@ $(function () {
         submitError: function ($form, event, errors) {
             // additional error messages or events
         },
+        submitSuccess: e => {
+            e.preventDefault();
+
+            const form = document.querySelector('form');
+            const submitResponse = document.querySelector('#success');
+            const formURL = 'https://www.smart-infra.net/Prod/submitForm';
+    
+            // Capture the form data
+            let data = {};
+            Array.from(form).map(input => (data[input.id] = input.value));
+            console.log('Sending: ', JSON.stringify(data));
+            submitResponse.innerHTML = 'Sending...'
+    
+            // Create the AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, formURL, true);
+            xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    
+            // Send the collected data as JSON
+            xhr.send(JSON.stringify(data));
+    
+            xhr.onloadend = response => {
+                if (response.target.status === 200) {
+                    form.reset();
+                    submitResponse.innerHTML = 'Form submitted. Success!';
+                } else {
+                    submitResponse.innerHTML = 'Error! Please try again.';
+                    console.error(JSON.parse(response));
+                }
+            };    
+        };
+        /***
         submitSuccess: function ($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
@@ -20,7 +53,6 @@ $(function () {
             }
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
-            /*****
             $.ajax({
                 url: "https://hvu3sq7v2j.execute-api.ap-northeast-1.amazonaws.com/Prod/submitForm",
                 type: "POST",
@@ -71,40 +103,8 @@ $(function () {
                     }, 1000);
                 },
             });
-            *****/
-            const form = document.querySelector('form');
-            const submitResponse = document.querySelector('#success');
-            const formURL = 'https://www.smart-infra.net/Prod/submitForm';
-        
-            form.onsubmit = e => {
-                e.preventDefault();
-        
-                // Capture the form data
-                let data = {};
-                Array.from(form).map(input => (data[input.id] = input.value));
-                console.log('Sending: ', JSON.stringify(data));
-                submitResponse.innerHTML = 'Sending...'
-        
-                // Create the AJAX request
-                var xhr = new XMLHttpRequest();
-                xhr.open(form.method, formURL, true);
-                xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
-                xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-        
-                // Send the collected data as JSON
-                xhr.send(JSON.stringify(data));
-        
-                xhr.onloadend = response => {
-                    if (response.target.status === 200) {
-                        form.reset();
-                        submitResponse.innerHTML = 'Form submitted. Success!';
-                    } else {
-                        submitResponse.innerHTML = 'Error! Please try again.';
-                        console.error(JSON.parse(response));
-                    }
-                };    
-            };
         },
+        *****/
         filter: function () {
             return $(this).is(":visible");
         },
