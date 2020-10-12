@@ -29,6 +29,8 @@ $(function () {
                     email: email,
                     message: message,
                 },
+                crossDomain: true,
+                dataType: 'jsonp',
                 cache: false,
                 success: function () {
                     // Success message
