@@ -37,7 +37,7 @@ $(function () {
                     console.error(JSON.parse(response));
                 }
             };    
-        };
+        },
         /***
         submitSuccess: function ($form, event) {
             event.preventDefault(); // prevent default submit behaviour
