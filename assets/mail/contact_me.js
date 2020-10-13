@@ -100,11 +100,24 @@ $(function () {
             const form = document.querySelector('form');
             const submitResponse = document.querySelector('#success');
             const formURL = 'https://www.smart-infra.net/Prod/submitForm';
-            
+
             let data = {};
             Array.from(form).map(input => (data[input.id] = input.value));
+            data["date"]=window.Date()
             console.log('Sending: ', JSON.stringify(data));
-            submitResponse.innerHTML = 'Sending...'
+            //submitResponse.innerHTML = 'Sending...'
+            $("#success").html("<div class='alert alert-warning'>");
+            $("#success > .alert-warning")
+                .html(
+                    "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
+                )
+                .append("</button>");
+            $("#success > .alert-warning").append(
+                "<strong>Your message is been sending... </strong>"
+            );
+            $("#success > .alert-warning").append("</div>");
+            //clear all fields
+            $("#contactForm").trigger("reset");
       
             // Create the AJAX request
             var xhr = new XMLHttpRequest();
@@ -116,6 +129,7 @@ $(function () {
             xhr.send(JSON.stringify(data));
       
             xhr.onloadend = response => {
+              $("#success").show()
               if (response.target.status === 200) {
                   // Success message
                   $("#success").html("<div class='alert alert-success'>");
@@ -148,7 +162,8 @@ $(function () {
                   //clear all fields
                   $("#contactForm").trigger("reset");
               }
-            };    
+              setTimeout(() => $("#success").hide() , 7000);  
+            }; 
         },
         filter: function () {
             return $(this).is(":visible");
