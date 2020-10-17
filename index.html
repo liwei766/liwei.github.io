@@ -25,6 +25,8 @@
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
                         </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="slides.html">SLIDES</a>
+                        </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
                         </li>
                     </ul>
@@ -168,7 +170,7 @@
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/k8slogo.jpg" alt="Kubernetes"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">Platform for automating deployment, scaling, and management of containerized applications. <br>
-                                        <a href="https://github.com/weaveworks/eksctl/tree/master/examples">Create kubernetes Cluster</a>
+                                        <a href="https://liwei766.net/2020/10/08/aws-eks-cdk-construct-library-native-integration-with-cdk8s">Create kubernetes Cluster</a>
                                     </p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
@@ -197,7 +199,7 @@
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/prometheus.png" alt="From metrics to insight"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">Power your metrics and alerting with a leading open-source monitoring solution.<br>
-                                        <a href="https://lovecosmetic.atlassian.net/wiki/spaces/IT/pages/59605172/1.+k8s+prometheus+operator">kube-prometheus operator</a>
+                                        <a href="https://liwei766.net/2020/10/06/aws-elastic-kubernetes-prometheus-operator">kube-prometheus operator</a>
                                     </p>
                                     
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
@@ -228,7 +230,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">A Loki-based logging stack consists of 3 components:
 ①promtail is the agent, responsible for gathering logs and sending them to Loki. ②loki is the main server, responsible for storing logs and processing queries. ③Grafana for querying and displaying the logs.<br>
-<a href="https://lovecosmetic.atlassian.net/wiki/spaces/IT/pages/59670849/2.+set+up+Loki+on+EKS+to+get+full+visibility+into+your+cluster+logs+while+using+Grafana">set up Loki on EKS to get full visibility into your cluster logs while using Grafana </a>  </p>
+<a href="https://liwei766.net/2020/10/06/set-up-loki-on-eks-to-get-full-visibility-into-your-cluster-logs-while-using-grafana">set up Loki on EKS to get full visibility into your cluster logs while using Grafana </a>  </p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -262,7 +264,7 @@
                                             <li>How are they performing?</li>
                                             <li>How can I operate on them?</li>
                                           </ul><br>
-                                          <a href="https://lovecosmetic.atlassian.net/wiki/spaces/IT/pages/59637872/3.+Istio+tracing">Istio tracing using Kiali</a>
+                                          <a href="https://istio.io/latest/docs/tasks/observability/kiali">Istio tracing using Kiali</a>
                                     </p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
@@ -297,7 +299,7 @@ Serverless means:<br>
 &nbsp;&nbsp;3. Never needing to rollout software on a hundred nodes.<br>
 &nbsp;&nbsp;4. Never paying for idle infrastructure.<br>
 &nbsp;&nbsp;5. Never losing business because you can't scale.<br>
-                                        <a href="https://lovecosmetic.atlassian.net/wiki/spaces/IT/pages/59670893/2.+API+Gateway+Lambda+RDS+Proxy">CDK serverless pattern example: API Gateway / Lambda / RDS Proxy</a></p>
+                                        <a href="https://github.com/liwei766/static-site">The serverless site redirects from HTTP to HTTPS, using a CloudFront distribution, Route53 alias record, and ACM certificate.</a></p>
 
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
@@ -316,7 +318,7 @@ Serverless means:<br>
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">A software development framework for defining cloud infrastructure in code and provisioning it through AWS CloudFormation.</h2>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">"CDK is a game changer" <br>- Amazon CTO</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -325,14 +327,12 @@ Serverless means:<br>
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/cdk.png" alt="A software development framework for defining cloud infrastructure in code and provisioning it through AWS CloudFormation."/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">CloudFormation enables you to:
-<pre>
-- Create and provision AWS infrastructure deployments predictably and repeatedly.
-- Leverage AWS products such as Amazon EC2, Amazon Elastic Block Store, Amazon SNS, Elastic Load Balancing, and Auto Scaling.
-- Build highly reliable, highly scalable, cost-effective applications in the cloud without worrying about creating and configuring the underlying AWS infrastructure.
-- Use a template file to create and delete a collection of resources together as a single unit (a stack).
-</pre> <br>
-                                    <a href="https://lovecosmetic.atlassian.net/wiki/spaces/IT/pages/59605202/1.+AWS+S3+React+Website+Pattern">Hosting a website on AWS with S3, CloudFront and Route53</a>
+                                    <p class="mb-5" style="text-align: left;">CloudFormation enables you to:<br>
+- Create and provision AWS infrastructure deployments predictably and repeatedly.<br>
+- Leverage AWS products such as EC2, EBS, SNS, ELB, and Auto Scaling.<br>
+- Reduced the time it takes to go from brand-new to fully-deployed infrastructure.<br>
+- Use a template file to create and delete a collection of resources together as a single unit (a stack).<br>
+                                    <a href="https://github.com/liwei766/cdk-ecs-fargate">AWS CDKを使って、vpc,app-lb/target group,ECS Cluster/FargateService/task,CertificateManager/Route53 RecordSetなど複数のStackを一気にデプロイ</a>
                                     </p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
@@ -392,7 +392,10 @@ Serverless means:<br>
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/ecs-fargate.png" alt="CDK-ECS-Fargate"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">AWS CDKを使って、vpc, app-lb / target group , ECS Cluster / FargateService / task , Certificate Manager / Route53 RecordSetなど複数の Stack を一気にデプロイ</p>
+                                    <p class="mb-5">AWS Fargate is a serverless compute engine for containers that works with both Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS).
+                                        <br>
+                                    <a href="https://github.com/liwei766/cdk-ecs-fargate">AWS CDKを使って、vpc,app-lb/target group,ECS Cluster/FargateService/task,CertificateManager/Route53 RecordSetなど複数のStackを一気にデプロイ</a>
+                                    </p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
@@ -453,7 +456,7 @@ Application failures</p>
                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/wordpress.jpg" alt="WordPress"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">Deploy Wordpress on EKS (ALB-Ingress-ACM-Route53)<br>
-                                        <a href="https://github.com/naturalplants/np-infrastructure/tree/master/k8s/07_services/welcart">Hosting a Wordpress on AWS with EKS, Ingress and Route53</a></p>
+                                        <a href="https://github.com/liwei766/wordpress-kubernetes">Hosting a Wordpress on AWS with EKS, Ingress and Route53</a></p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
