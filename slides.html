@@ -68,7 +68,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <img src="images/k8s-1.jpg" style="display: block; margin: auto;" class="rounded" width="100%" height="100%"/>
+                <img src="images/k8s-1.jpg" style="display: block; margin: auto;" class="rounded" width="100%" height="100%" data-toggle="tooltip" title="Triathon"/>
             </div>
         </section>
         
@@ -84,7 +84,7 @@ Smart-Infra Inc.</p>
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.github.com/liwei766"><i class="fab fa-fw fa-github"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sakura_liwei"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://liwei766.net"><i class="fas fa-blog"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.smart-infra.net/galaxy"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.github.com/liwei766" data-toggle="tooltip" title="github"><i class="fab fa-fw fa-github"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sakura_liwei" data-toggle="tooltip" title="twitter"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://liwei766.net" data-toggle="tooltip" title="blog"><i class="fas fa-blog"></i></a><a class="btn btn-outline-light btn-social mx-1" href="404.html" data-toggle="tooltip" title="spacex"><i class="fab fa-fw fa-dribbble"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
@@ -110,5 +110,10 @@ Smart-Infra Inc.</p>
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();   
+            });
+        </script>
     </body>
 </html>
